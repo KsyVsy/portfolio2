@@ -1,0 +1,377 @@
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top:100px;
+}
+
+*{
+box-sizing:border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'montserrat', sans-serif;
+    color: white;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+    url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background: linear-gradient(to bottom,#0a0a0a,#111);
+    color:white;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+}
+
+.logo{
+    text-align:center;
+    width:100%;
+    font-size:24px;
+    color:red;
+}
+
+nav a{
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover{
+    color: red;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:url("images/car1.jpg") center/cover no-repeat;
+    position:relative;
+    z-index:1;
+}
+
+
+.hero h1{
+    font-size:64px;
+    letter-spacing:2px;
+    color:white;
+}
+
+.hero p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hero button{
+
+    margin-top: 20px;
+}
+
+section{
+    padding: 100px 20px;
+}
+
+section{
+    max-width: 900px;
+    margin: auto;
+    margin-top: 60px;
+    padding:80px 40px 40px 40px;
+    padding: 40px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    opacity: 1;
+    transform: none;
+}
+
+section.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill .process{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill .step{
+    width: 250px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.04s;
+}
+
+.skill:hover, .step:hover{
+transform: translateY(-5px);
+}
+
+.detail{
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.progress{
+background:red;
+height:10px;
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+.stat{
+background:rgba(255,255,255,0.08);
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.number{
+font-size:40px;
+color:red;
+}
+
+.process{
+    
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255,0,0,0.3);
+}
+
+.card h3{
+    color: red;
+}
+
+.car{
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.car:hover{
+    transform: scale(1.08);
+}
+
+button {
+    background: linear-gradient(45deg, red, orange);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+ul{
+    text-align: left;
+}
+
+h1, h2{
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+h2, h3, p {
+
+    transition:0.4s;
+}
+
+h2:hover{
+
+    transform:translateY(-5px);
+    color:red;
+}
+
+h3:hover{
+    transform:translateY(-4px);
+    color:red;
+}
+
+p:hover{
+    transform:translateY(-3px);
+}
+
+.fade-in{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade-in.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.menu-button{
+    font-size:30px;
+    cursor:pointer;
+    position:absolute;
+    left:20px;
+    top:25px;
+    color:white;
+    z-index:1001;
+}
+
+
+#sidebar{
+    position:fixed;
+    left:-250px;
+    top:0;
+    width:250px;
+    height:100%;
+    background:black;
+    padding-top:80px;
+    display:flex;
+    flex-direction:column;
+    transition:0.4s;
+}
+
+#sidebar a{
+    color:white;
+    padding:15px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+#sidebar.active{
+    left:0;
+}
+
+.hero {
+    height: 100vh;
+    background: url('images/car4.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background: linear-gradient(45deg, red, orange);
+    border: none;
+    padding: 15px 35px;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+.cars {
+    padding: 120px 20px;
+    margin-top: 50px;
+}
+
+.cars-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.car-card {
+    width: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.car-card img {
+    width: 100%;
+}
+
+.car-card h3 {
+    margin: 15px 0;
+}
+
+.car-card p {
+    opacity: 0.7;
+    padding-bottom: 20px;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255,0,0,0.3);
+}
